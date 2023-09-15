@@ -1,0 +1,66 @@
++와 >는 잘 사용하지 않음
+
++는 인접 선택자. 
+같은 레벨에 있는, 근처에 있는 선택자에 적용
+
+>는 직계 자손 선택자
+footer > a
+
+
+속성 선택자 input[type='text'] 구성
+
+
+선택:hover
+마우스 올려두면 변경되는 속성 입력
+
+선택:active
+클릭 상태로 있으면 변경되는 속성 입력
+
+
+nth of type
+선택:nth-of-type(2n) 
+2의 배수마다 적용
+
+
+
+h2::first-letter
+h2의 첫번째 글자에 대한 속성 적용 (크롬 문제 때문에 :: 쓰는 것)
+
+p::first-line
+p의 첫번째 줄에 대한 속성 적용
+
+p:selection
+p에 드래그하는 경우 변경 속성
+
+
+*css에서는 순서가 중요함. 나중 내용이 overwrite됨
+
+*specificity
+두가지 속성 적용 시 충돌 문제
+예시
+p {
+    color: yellow;
+}
+
+section p {
+    color: teal;
+}
+
+두 가지 중에, 어떤 것이 먼저 적용?
+기본 선택자 중 우선시하는 순서
+ID > Class > Element
+
+
+!important는 가장 중요한 속성이라는 것을 명시할 때 사용(사용 비추, but 알 필요는 있음)
+예시
+.box {
+    color: red !important;
+}
+
+
+보통은 위에 상속 받는 경우가 많으나, 예외 경우가 있음
+이런 경우에는 속성값을 inherit로 변경
+예시
+button, input {
+    color: inherit; (전체에 적용되는 값을 상속받게 됨)
+}

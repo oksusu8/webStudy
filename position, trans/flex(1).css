@@ -1,0 +1,104 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+#container {
+    background-color: #003049;
+    width: 90%;
+    height: 500px;
+    margin: 0 auto;
+    border: 5px solid #003049;
+    display: flex;
+    flex-direction: row; /* default */
+    justify-content: center;
+    /*flex-wrap: wrap;*/
+}
+
+#container div {
+    width: 200px; height: 200px;
+    flex-basis: 200px; /* 위의 너비가 완전히 무시됨 */
+    /*max-width: 300px;*/
+}
+
+div:nth-of-type(1) {
+    flex-grow: 1; /* 단위 필요 x. 비율.*/
+}
+div:nth-of-type(4) {
+    flex-grow: 2; /* 단위 필요 x */
+}
+
+
+/* flex-direction(컨테이너 안에서 본 축 방향을 결정하는 속성)
+flex-direction: row;  -> default (가로 좌우 정렬)
+flex-direction: row-reverse;  -> (가로 우좌 정렬)
+flex-direction: column;  -> default (세로 위아래 정렬)
+flex-direction: column-reverse;  -> (세로 아래위 정렬)
+*/
+
+/* justify-content(주축을 기준으로 요소와 컨텐츠를 어떻게 배치할지 결정) 
+justify-content: flex-start;  -> default
+justify-content: flex-end;  -> 반대쪽으로 밀어주기
+justify-content: center;  -> 중앙으로
+justify-content: space-between;  -> 바깥 여백을 없애고, 요소 사이의 간격 띄움 (요소 사이에만 빈 곳)
+justify-content: space-around;  -> 같은 면적의 여백 부여 (요소들만 같은 여백 가짐)
+justify-content: space-evenly;  -> 컨테이너와 요소들 전부 모두 같은 여백 가짐
+*/
+
+/* flex-wrap(요소 크기들이 컨테이너 초과하면 어떤 식으로 할 것인지. 교차축 결정)
+flex-wrap: wrap;  -> default(다음줄에 이어서 순)
+flex-wrap: wrap-reverse; -> 반대로
+flex-wrap: nowrap; -> 실행 안함
+*/
+
+/* align-items(교차축을 따라 아이템 배열)
+align-items: flex-start;
+align-items: flex-end;
+align-items: center;  -> 중앙정렬 (but 안에 있는 텍스트는 영향 x)
+align-items: baseline;  -> 텍스트를 기준선으로 결정
+*/
+
+/* align-content(행이나 열이 여러개일 떄, 교차축을 기준으로 정렬 - 열 사이의 여백을 조정)
+align-content: space-between;
+align-content: flex-start;
+div:nth-of-type(2) {
+    align-self: center;
+}
+div:nth-of-type(3) {
+    align-self: flex-end;
+}
+*/
+
+/* align-self(단일 요소에 사용하거나, 컨테이너에서 두 개 요소에 개별 적용할 떄 사용. align-content랑 비슷.)
+*/
+
+/* flex-basis(요소가 배치되기 전 요소의 최초 크기 결정)
+flex-grow(공간이 있을 때, 요소가 그 공간을 얼마나 차지할지 정함)
+flex-shrink(공간이 있을 때, 요소들이 줄어드는 비율 통제) grow<->shrink
+
+위 3가지를 한번에 쓰는 속기법
+flex: flex-grow flex-shirink flex-basis
+*/
+
+main {
+    width: 80%;
+    margin: 0 auto;
+    border: 5px solid black;
+    height: 500px;
+    display: flex;
+}
+
+main .sidebar {
+    background-color: #6930c3;
+    flex: 1 2 200px; /* 단위 없이 입력하면 flex-grow로 취급 */
+
+}
+
+main .maincontent {
+    background-color: #80ffdb;
+    flex: 2 1 800px;
+}
+

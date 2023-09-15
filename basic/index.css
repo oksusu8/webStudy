@@ -1,0 +1,24 @@
+
+h1 {
+    text-align: center; /*텍스트 배치 정렬*/
+    font-size: 30px; /* 실제 웹 사이트에서는 거의 사용하지 않음 */
+    font-family: Arial; /* 폰트 설정 시 이름 적으면 됨*/
+    /* font stack은 사용하려는 폰트를 순서대로 적은 목록 (백업, 대체 폰트 설정 가능)
+    font-family: Arial, Helvetica, sans-serif; */
+    
+}
+
+h2 {
+    font-weight: 700; /* 폰트 굵기 */
+    text-decoration: blue underline; /* 밑줄, 윗줄, 취소선(line-through) 등 조정*/
+    /* a태그의 경우 밑줄 제거용으로 많이 쓰임 -> text-decoration: none; */
+    
+}
+
+p {
+    line-height: 2; /* 텍스트 간 줄 간격 조정*/
+    letter-spacing: 3px; /* 자간 조정 */
+}
+
+
+

@@ -1,0 +1,10 @@
+div {
+    width: 200px; height: 200px;
+    background-color: olivedrab;
+    border: 4px solid black;
+    /*display: inline;  -> inline은 width, height 적용 불가하므로 에러 */
+    display: inline-block;
+}
+/* 
+요소가 inline이면, width, height, 세로 margin 전부 무시됨 (padding은 ok)
+*/

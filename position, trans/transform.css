@@ -1,0 +1,46 @@
+h1 {
+    background-color: #2a9d8f;
+    border: 5px solid #264653;
+    color: #eae2b7;
+    padding: 0.7em;
+    width: 300px;
+    font-size: 1.8em;
+    text-align: center;
+    margin: 20px auto; /* 중앙 정렬 */
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: lighter;
+}
+
+/* transform의 rotate (회전) */
+section:first-of-type h1:nth-of-type(1) {
+    /*transform-origin: bottom right; /* 기본은 중심 기점 회전 */
+    transform: rotate(45deg);
+}
+
+/* transform의 scale(상대적 크기 변화) */
+section:first-of-type h1:nth-of-type(2) {
+    /*transform-origin: bottom right; /* 기본은 중심 기점 회전 */
+    transform: scale(0.5);
+    /*transform: scale(2, 1);*/
+}
+
+/* transform의 translate(요소 움직이기 기능) */
+section:first-of-type h1:nth-of-type(3) {
+    transform: translateX(200px); /* x 방향으로 200px 이동 */
+}
+section:first-of-type h1:nth-of-type(4) {
+    transform: translate(-200px, 50px); /* x 방향으로 -200px, y 방향으로 50px */
+}
+
+/* transform의 skew(2차원 평면에서 기울이기 기능) */
+section:nth-of-type(2) h1:nth-of-type(1) {
+    transform: skew(30deg);
+}
+section:nth-of-type(2) h1:nth-of-type(2) {
+    transform: skew(100deg, 5deg);
+}
+
+/*transform 여러 속성 같이 쓰기*/
+section:nth-of-type(2) h1:nth-of-type(3) {
+    transform: translateX(-500px) rotate(20deg) scale(0.6); /* 나열해서 작성하면 됨*/
+}

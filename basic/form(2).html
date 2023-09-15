@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <title></title>
+    </head>
+    <body>
+        <!-- checkbox는 label이 중요함! -->
+        <h2>Checkbox</h2>
+        <p>Choose your monster's feature:</p>
+        <div>
+            <input type="checkbox" id="scales" checked>
+            <label for="scales">Scales</label>
+        </div>
+        <div>
+            <input type="checkbox" id="Horns">
+            <label for="Horns">Horns</label>
+        </div>
+
+        <hr>
+        <h2>Radio button</h2>
+        <!-- radio button은 하나만 선택 ->  같은 name 속성 부여 -->
+        <!-- but, name에 같은 속성을 부여하니 submit하면 URL에 어떤 것을 선택했는지 정확히 나오지 않음
+        -> file:///search?drone=on   -> drone은 알 수 있지만 어떤 것인지 모름
+            => 이를 위해 value 속성 부여(실제값 전송)  -> file:///search?drone=louie 라고 표시됨 -->
+        <form action="/search">
+            <p>Select a maintenance drone:</p>
+            <div>
+                <input type="radio" id="huey" name="drone" value="huey">
+                <label for="huey">Huey</label>
+            </div>
+            <div>
+                <input type="radio" id="dewey" name="drone" value="dewey">
+                <label for="dewey">Dewey</label>
+            </div>
+            <div>
+                <input type="radio" id="louie" name="drone" value="louie">
+                <label for="louie">Louie</label>
+            </div>
+            <button>제출</button>
+        </form>
+
+        <hr>
+        <!--보통 select와 option은 같이 쓰임-->
+        <h2>select & option</h2>
+        <form action="">
+            <label for="meal">Please Select an Entree</label><br>
+            <select name="meal" id="meal">
+
+                <option value="" selected>--Please Choose Option--</option>
+                <option value="fish">Fish</option>
+                <option value="veg">vegetable</option>
+                <option value="steak">steak</option>
+            </select>
+        </form>
+
+        <hr><hr>
+        <h2>기타 input type - range</h2>
+        <form action="/search">
+            <h3>range type</h3>
+            <label for="cheese">Amount of Cheese : </label>
+            <input type="range" id="cheese" name="cheese_level" min="0" max="10" value="4">
+            <!-- file:///search?cheese_level=5 -->
+            <!--value는 초기 설정 값  /  min, max로 범위 지정-->
+            <button>submit</button>
+        </form>
+
+        <br><hr><hr>
+        <h2>Textarea</h2>
+        <label for="story">Tell us your story :</label><br>
+        <textarea id="story" name="story" rows="5" cols="40" placeholder="type..."></textarea>
+    </body>
+</html>

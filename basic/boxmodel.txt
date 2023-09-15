@@ -1,0 +1,58 @@
+* box model
+
+--- border ---
+border-width
+border-color
+border-style
+위 3개를 합쳐서 border: 1px solid black;
++ 이 외에도 여러 방향 border 임의 조정 가능
+border-left-color 
+border-right-width 등
++ border-radius 보통 % 사용
+border-radius: 25% 10%;
+border-radius: 10% 30% 50% 70%;
+
+border로 인해 영역 침범시, 기존 영역을 지키기 위해
+box-sizing: border-box;
+
+--- padding(in border - outside content) ---
+padding: 10px; (Apply to all four sides)
+padding: 5px 10px; (vertical horizontal)
+padding : 5px 0 12px 10px; (top right bottom left)
+
+--- margin(outside border / orange section) ---
+테두리 바깥과 다른 요소 사이에 간격을 만들고 싶을 때 사용
+padding과 같은 방식으로 적용
+margin-left: 50px;
+margin: 10px 0;
++ body 태그에는 기본적으로 margin이 적용되어 있는데 없애고 싶다면 초기화 작업이 필요함
+margin: 0;
+
+
+--- css 단위 ---
+<percentage (%) - 상대적 단위 주로 width, height에 많이 사용>
+width : half the width of the parent (부모 요소의 절반)
+
+<em - 상대적 단위>
+부모 요소 대비 몇 배
+px 단위 사용시, 폰트 사이즈에 따라 border-radius도 달라지는데, 이를 방지하기 위해 em을 사용함
+예시
+부모 {
+    font-size: 10px;
+}
+자식 {
+    font-size:1em;   <- 10px
+    font-size:2em;   <- 20px
+}
+
++ em의 단점 : 중첩된 목록일수록 누적되면서 극단적으로 작아지거나 커짐.
+
+<rem - 상대적 단위>
+font size를 부모 요소에 따라 바꾸지 않고, 루트 html font size에 기반해 바뀜
+(=문서 전체에서 하나의 font size에 비례해 바뀜)
+
+루트 html font size는 css파일에서 설정
+예시
+html {
+    font-size: 20px;
+}

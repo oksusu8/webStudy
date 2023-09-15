@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <title></title>
+    </head>
+    <body>
+        <h1>Validation Demo</h1>
+        <form action="/dummy">
+            <label for="firstname">Enter your first name : </label>
+            <input type="text" id="firstname" name="first" required> 
+            <!--required 속성 -> 입력해야만 넘어감-->
+            <br>
+            <label for="username">Username : </label>
+            <input type="text" id="username" name="username" minlength="10"><br>
+            <!--minlength로 최소 글자 수 제한 가능-->
+
+            <h2>자체적으로 유효성 검사 패턴을 가지고 있는 유형 - email, url</h2>
+            <label for="email">Email : </label>
+            <input type="email" id="email" name="email" required><br>
+            <label for="url">URL : </label>
+            <input type="url" id="url" name="url" required><br>
+
+            <button>submit</button>
+        </form>
+    </body>
+</html>

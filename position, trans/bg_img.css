@@ -1,0 +1,20 @@
+section{
+    width: 80%;
+    height: 800px;
+    margin: 0 auto;
+    /*background-image: url(https://news.samsungdisplay.com/wp-content/uploads/2018/08/8.jpg);
+    background-size: cover;
+    background-position: top;*/
+
+    background: center/cover url(https://news.samsungdisplay.com/wp-content/uploads/2018/08/8.jpg);
+    /*
+    background: center/30%
+    background: center/30% no-repeat  
+    background: center/30% no-repeat blue url()
+    */
+}
+
+h1 {
+    font-size: 100px;
+    color: white;
+}
